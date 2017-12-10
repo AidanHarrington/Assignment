@@ -19,7 +19,6 @@ public class Ball : MonoBehaviour {
         Vector2 tweak = new Vector2(randomX,randomY);
         if (hasStarted)
         {
-            this.GetComponent<AudioSource>().Play();
             this.GetComponent<Rigidbody2D>().velocity += tweak;
         }
     }
