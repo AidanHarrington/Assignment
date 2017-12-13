@@ -81,14 +81,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Ball.cs" />
+    <Compile Include="Assets\Scripts\Blue_Paddle.cs" />
     <Compile Include="Assets\Scripts\Brick.cs" />
-    <Compile Include="Assets\Scripts\GenerateBricks.cs" />
     <Compile Include="Assets\Scripts\Level_Manager.cs" />
     <Compile Include="Assets\Scripts\LooseCollider.cs" />
-    <Compile Include="Assets\Scripts\MusicPlayer.cs" />
-    <Compile Include="Assets\Scripts\Paddle.cs" />
+    <Compile Include="Assets\Scripts\Puck.cs" />
+    <Compile Include="Assets\Scripts\Red_Paddle.cs" />
     <Compile Include="Assets\Scripts\Test_Fade.cs" />
+    <Compile Include="Assets\Scripts\other\Ball.cs" />
+    <Compile Include="Assets\Scripts\other\Bumper.cs" />
+    <Compile Include="Assets\Scripts\other\GenerateBricks.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

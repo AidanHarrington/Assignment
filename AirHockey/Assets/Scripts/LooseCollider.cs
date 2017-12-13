@@ -5,6 +5,7 @@ using UnityEngine;
 public class LooseCollider : MonoBehaviour {
 
     private Level_Manager myLevelManager;
+    public bool isgoal1;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -14,7 +15,7 @@ public class LooseCollider : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collision)
     {
         print("Triggered by " + collision.gameObject.name);
-        myLevelManager.LoadLevel("Win");
+        myLevelManager.LoadLevel("level01");
     }
 
     // Use this for initialization
