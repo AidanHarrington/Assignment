@@ -19,16 +19,16 @@ public class Player_Input_Controller : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.W)) {
 
-			leftBat.GetComponent<Rigidbody>().velocity = new Vector3(0f, 18f, 0f);
+			leftBat.GetComponent<Rigidbody>().velocity = new Vector3(0f, 50f, 0f);
 		}
 
 		else if (Input.GetKey (KeyCode.S)) {
 
-			leftBat.GetComponent<Rigidbody>().velocity = new Vector3(0f, -18f, 0f);
+			leftBat.GetComponent<Rigidbody>().velocity = new Vector3(0f, -50f, 0f);
 		}
 
         float mouseY = (Input.mousePosition.y / Screen.height * 20f) - 10f;
-        mouseY = Mathf.Clamp(mouseY, -8f, 8f);
+        mouseY = Mathf.Clamp(mouseY, -10f, 10f);
 
         Vector3 paddlePosition = new Vector3(rightBat.transform.position.x, mouseY, 0f);
         //print(mouseY);

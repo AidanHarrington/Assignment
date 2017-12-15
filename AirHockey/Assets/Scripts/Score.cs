@@ -14,6 +14,8 @@ public class Score : MonoBehaviour {
 
     public int playerOneScore;
     public int playerTwoScore;
+    public static int tot1;
+    public static int tot2;
 
     public bool isLastLevel;
     public bool isLevel2;
@@ -40,10 +42,10 @@ public class Score : MonoBehaviour {
 
     public void GivePlayerOneAPoint(){
         playerOneScore += 1;
+        tot1 += 1;
 
         playerOneScoreText.text = playerOneScore.ToString();
 
-        //Enter player 2 victory
         if (isLastLevel)
         {
             if (playerOneScore == 8)
@@ -69,10 +71,10 @@ public class Score : MonoBehaviour {
 
     public void GivePlayerTwoAPoint(){
         playerTwoScore += 1;
+        tot2 += 1;
 
         playerTwoScoreText.text = playerTwoScore.ToString();
 
-        //Enter player 2 victory
         if (isLastLevel){
             if (playerTwoScore == 8)
             {

@@ -4,27 +4,39 @@ using UnityEngine;
 
 public class MovingObstacle : MonoBehaviour {
 
-    public GameObject rightBat;
-    public float speed = 5f;
-    Rigidbody rb;
+    private Vector3 posA;
+    private Vector3 posB;
+    private Vector3 nextpos;
+
+    [SerializeField]
+    private float speed;
+
+    [SerializeField]
+    private Transform childTransform;
+
+    [SerializeField]
+    private Transform transformB;
 
     // Use this for initialization
     void Start () {
-        rb = GetComponent<Rigidbody>();
+        posA = childTransform.localPosition;
+        posB = transformB.localPosition;
+        nextpos = posB;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        float pos = (Input.mousePosition.y / Screen.height * 20f) - 10f;
-        pos = Mathf.Clamp(pos, -8f, 8f);
-
-        Vector3 ObstaclePos = new Vector3(rightBat.transform.position.x, pos * speed * Time.deltaTime, 0f);
-        //print(mouseY);
-
-        //rightBat.transform.position = paddlePosition;
-
-        
+        Move();
     }
-    
-        
+
+    private void Move()
+    {
+        childTransform.localPosition = Vector3.MoveTowards(childTransform.localPosition, nextpos, speed * Time.deltaTime);
+        ChangeDestination();        
+    }
+
+    private void ChangeDestination()
+    {
+        nextpos = nextpos != posA ? posA : posB;
+    }
 }
