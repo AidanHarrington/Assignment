@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scence/Player2Victory.unity
+- path: Assets/Scence/Player1Victory.unity
   isLoaded: 1
   isActive: 1
